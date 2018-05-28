@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package krasa.iconpack;
 
 import com.intellij.openapi.util.IconLoader;
@@ -15,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashSet;
 
+/**originally from https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack*/
 public class IdeaIconPack extends IconPathPatcher {
 
 	public final static HashSet<String> newIcons = new HashSet<>();
