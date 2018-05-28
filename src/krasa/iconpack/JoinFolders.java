@@ -14,7 +14,7 @@ public class JoinFolders {
 		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2017_12", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest);
 
 
-		copy2("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea11", dest);
+		copy2("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\bulenkov_plugin", dest);
 
 
 	}
