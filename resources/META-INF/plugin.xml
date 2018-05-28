@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Idea Legacy Icon Pack</name>
-    <version>1</version>
+    <version>1.1</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
  
     <description>Changes new modern icons to the old ones.</description>

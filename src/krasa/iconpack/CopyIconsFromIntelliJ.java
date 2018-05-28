@@ -5,6 +5,8 @@
 
 package krasa.iconpack;
 
+import org.apache.commons.lang.StringUtils;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -12,12 +14,10 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.util.function.Consumer;
 
-import org.apache.commons.lang.StringUtils;
-
 public class CopyIconsFromIntelliJ {
 	public static void main(String[] args) throws IOException {
 		String from = "F:\\workspace\\_projekty\\Github\\intellij-community";
-		String here = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea2017_12";
+		String here = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28";
 
 		Files.walk(Paths.get(from)).filter(s -> {
 			String s1 = s.toString();
