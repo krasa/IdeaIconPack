@@ -1,0 +1,28 @@
+<idea-plugin version="2">
+    <id>krasa.IdeaIconPack</id>
+    <name>Idea Legacy Icon Pack</name>
+    <version>1</version>
+    <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
+ 
+    <description>Changes new modern icons to the old ones.</description>
+
+    <change-notes>
+    </change-notes>
+    <idea-version since-build="182.000"/>
+    <depends>com.intellij.modules.lang</depends>
+
+    <application-components>
+        <component>
+            <implementation-class>krasa.iconpack.IdeaIconPack</implementation-class>
+        </component>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+</idea-plugin>
