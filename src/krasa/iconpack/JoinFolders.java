@@ -10,26 +10,27 @@ public class JoinFolders {
 	public static void main(String[] args) throws IOException {
 		String dest = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2016_2";
 
-
 		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_181.5087.20", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
 
-		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_162.2228.15", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, new Filter() {
+		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_162.2228.15", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
+
+		copy2("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\bulenkov_plugin", dest, null);
+
+		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_181.5087.20", dest, dest, new Filter() {
 			@Override
-			boolean skip(Path fileOrDir) {
+			boolean include(Path fileOrDir) {
 				//they are nicer in IJ 2018
-				return startsWith(fileOrDir, "commit", "checkOut","menu-open");
+				return startsWith(fileOrDir, "commit", "checkOut", "menu-open", "toolWindowMaven", "mavenLogo");
 			}
 
 		});
 
-
-		copy2("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\bulenkov_plugin", dest);
-
+//
 		IdeaIconPack_2018_1.main(args);
 		IdeaIconPack_2016_2.main(args);
-	}           
+	}
 
-	private static void copyDiff(String src, String diff, String dest, final Filter skip) throws IOException {
+	private static void copyDiff(String src, String diff, String dest, final Filter filter) throws IOException {
 		Path srcDir = Paths.get(src);
 		Path diffDir = Paths.get(diff);
 		Path dstDir = Paths.get(dest);
@@ -57,7 +58,11 @@ public class JoinFolders {
 				}
 
 
-				if (skip != null && skip.skip(fileOrDir)) {
+				if (filter != null && !filter.include(fileOrDir)) {
+					return FileVisitResult.CONTINUE;
+				}
+
+				if (filter != null && filter.skip(fileOrDir)) {
 					return FileVisitResult.CONTINUE;
 				}
 
@@ -84,7 +89,7 @@ public class JoinFolders {
 		return file.getParent().equals(srcDir) && (name.contains("_logo") || name.contains("_about"));
 	}
 
-	private static void copy2(String s, String dest) throws IOException {
+	private static void copy2(String s, String dest, Filter filter) throws IOException {
 		Path srcDir = Paths.get(s);
 		Path dstDir = Paths.get(dest);
 
@@ -107,6 +112,15 @@ public class JoinFolders {
 					return FileVisitResult.CONTINUE;
 				}
 
+				if (filter != null && !filter.include(fileOrDir)) {
+					return FileVisitResult.CONTINUE;
+				}
+
+				if (filter != null && filter.skip(fileOrDir)) {
+					return FileVisitResult.CONTINUE;
+				}
+
+
 				if (!Files.exists(dest.getParent())) {
 					Files.createDirectories(dest.getParent());
 				}
@@ -115,11 +129,18 @@ public class JoinFolders {
 				return FileVisitResult.CONTINUE;
 			}
 		});
-	}     
-	abstract static class Filter {
-		abstract boolean skip(Path fileOrDir);
+	}
 
-		boolean startsWith(Path fileOrDir, String... names) {
+	abstract static class Filter {
+		boolean skip(Path fileOrDir) {
+			return false;
+		}
+
+		boolean include(Path fileOrDir) {
+			return true;
+		}
+
+		final boolean startsWith(Path fileOrDir, String... names) {
 			for (String s : names) {
 				if (fileOrDir.getFileName().toString().startsWith(s)) {
 					return true;
@@ -128,6 +149,6 @@ public class JoinFolders {
 			return false;
 		}
 	}
-	
+
 
 }

@@ -181,9 +181,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/codeStyle/AddNewSectionRule.png");
 		newIcons.add("/codeStyle/Gear.png");
 		newIcons.add("/codeStyle/mac/AddNewSectionRule.png");
-		newIcons.add("/com/intellij/ide/ui/laf/darcula/icons/checkmark.png");
-		newIcons.add("/com/intellij/ide/ui/laf/darcula/icons/checkmarkDisabled.png");
-		newIcons.add("/com/intellij/ide/ui/laf/darcula/icons/checkmarkSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/darcula/icons/clear.png");
 		newIcons.add("/com/intellij/ide/ui/laf/darcula/icons/search.png");
 		newIcons.add("/com/intellij/ide/ui/laf/darcula/icons/searchWithHistory.png");
@@ -212,9 +209,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/checkBoxSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/checkBoxSelectedDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/checkBoxSelectedFocused.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/checkmark.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/checkmarkDisabled.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/checkmarkSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/comboLeft.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/comboLeftDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/comboLeftFocused.png");
@@ -268,9 +262,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/checkBoxSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/checkBoxSelectedDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/checkBoxSelectedFocused.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/checkmark.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/checkmarkDisabled.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/checkmarkSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/comboLeft.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/comboLeftDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/comboLeftFocused.png");
@@ -343,12 +334,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/spinnerRight.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/spinnerRightDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/spinnerRightFocused.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmark.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmarkDisabled.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmarkDisabled_win10.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmarkSelected.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmarkSelect_win10.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmark_win10.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/linkDropTriangle.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/winCheckSign.png");
 		newIcons.add("/com/intellij/uiDesigner/icons/toolWindowUIDesigner.png");
@@ -359,7 +344,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/jetbrains/mako/mako.png");
 		newIcons.add("/com/jetbrains/web2py/web2py.png");
 		newIcons.add("/css/atrule.png");
-		newIcons.add("/css/custom_property.png");
 		newIcons.add("/css/property.png");
 		newIcons.add("/css/pseudo-class.png");
 		newIcons.add("/css/pseudo-element.png");
@@ -419,8 +403,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/debugger/restoreLayout.png");
 		newIcons.add("/debugger/showCurrentFrame.png");
 		newIcons.add("/debugger/smartStepInto.png");
-		newIcons.add("/debugger/streamDebugger/stream_debugger.png");
-		newIcons.add("/debugger/streamDebugger/tab.png");
 		newIcons.add("/debugger/threads.png");
 		newIcons.add("/debugger/threadStates/io.png");
 		newIcons.add("/debugger/threadStates/locked.png");
@@ -1017,8 +999,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/org/jetbrains/plugins/github/github_icon.png");
 		newIcons.add("/process/stop.png");
 		newIcons.add("/process/stopHovered.png");
-		newIcons.add("/providers/azure.png");
-		newIcons.add("/providers/Exasol.png");
 		newIcons.add("/providers/mysql.png");
 		newIcons.add("/runConfigurations/rerunFailedTests.png");
 		newIcons.add("/runConfigurations/scroll_down.png");
