@@ -8,10 +8,10 @@ import java.nio.file.attribute.BasicFileAttributes;
 
 public class JoinFolders {
 	public static void main(String[] args) throws IOException {
-		String dest = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack";
+		String dest = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2018_1";
 
 
-		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2017_12", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
+		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_181.5087.20", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
 
 		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_162.2228.15", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, new Filter() {
 			@Override
@@ -23,10 +23,11 @@ public class JoinFolders {
 		});
 
 
-		copy2("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\bulenkov_plugin", dest);
+//		copy2("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\bulenkov_plugin", dest);
 
-		IdeaIconPack.main(args);
-	}
+		IdeaIconPack_2018_1.main(args);
+		IdeaIconPack_2016_2.main(args);
+	}           
 
 	private static void copyDiff(String src, String diff, String dest, final Filter skip) throws IOException {
 		Path srcDir = Paths.get(src);

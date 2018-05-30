@@ -1,11 +1,14 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for IntelliJ 2018.2+</name>
-    <version>1.3</version>
+    <version>1.4</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
-        <![CDATA[Changes new modern icons to the old ones. Based on <a href="https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack">Idea 2016.2 Icon Pack</a> plugin.]]></description>
+        <![CDATA[Changes new modern icons to the old ones. You can choose between icons from IntelliJ 2016.2 (includes some from 2018.1) and 2018.1. 
+        
+        
+        Based on <a href="https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack">Idea 2016.2 Icon Pack</a> plugin.]]></description>
 
     <change-notes>
     </change-notes>
@@ -14,7 +17,7 @@
 
     <application-components>
         <component>
-            <implementation-class>krasa.iconpack.IdeaIconPack</implementation-class>
+            <implementation-class>krasa.iconpack.Patcher</implementation-class>
         </component>
     </application-components>
 
@@ -25,5 +28,7 @@
     </actions>
 
     <extensions defaultExtensionNs="com.intellij">
+        <applicationConfigurable id="krasa.IdeaIconPack" instance="krasa.iconpack.MyConfigurable"
+                                 displayName="Legacy Icon Pack"/>
     </extensions>
 </idea-plugin>
