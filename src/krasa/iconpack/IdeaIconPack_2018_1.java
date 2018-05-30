@@ -32,10 +32,10 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 
 	public static void main(String[] args) {
 		StringBuilder buf = new StringBuilder("\n");
-		buf.append("  \n");
-		buf.append("  static {\n");
+		buf.append("\n");
+		buf.append("\tstatic {\n");
 		iterate(new File("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2018_1"), "/", buf);
-		buf.append("  }\n").append("}");
+		buf.append("\t}\n").append("}");
 
 		try {
 			File file = new File("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\krasa\\iconpack\\IdeaIconPack_2018_1.java");
@@ -60,7 +60,7 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 			if (file.isDirectory()) {
 				iterate(file, prefix + name + "/", buf);
 			} else if (name.endsWith(".png") && !name.contains("@2x") && !name.contains("_dark")) {
-				buf.append("    newIcons.add(\"" + prefix + name + "\");\n");
+				buf.append("\t\tnewIcons.add(\"" + prefix + name + "\");\n");
 			}
 		}
 

@@ -32,10 +32,10 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 
 	public static void main(String[] args) {
 		StringBuilder buf = new StringBuilder("\n");
-		buf.append("  \n");
-		buf.append("  static {\n");
+		buf.append("\n");
+		buf.append("\tstatic {\n");
 		iterate(new File("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2016_2"), "/", buf);
-		buf.append("  }\n").append("}");
+		buf.append("\t}\n").append("}");
 
 		try {
 			File file = new File("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\krasa\\iconpack\\IdeaIconPack_2016_2.java");
@@ -60,7 +60,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 			if (file.isDirectory()) {
 				iterate(file, prefix + name + "/", buf);
 			} else if (name.endsWith(".png") && !name.contains("@2x") && !name.contains("_dark")) {
-				buf.append("    newIcons.add(\"" + prefix + name + "\");\n");
+				buf.append("\t\tnewIcons.add(\"" + prefix + name + "\");\n");
 			}
 		}
 
@@ -226,6 +226,22 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/comboRightEditable.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/comboRightEditableDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/comboRightFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBox.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxIndeterminateSelected.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxIndeterminateSelectedDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxIndeterminateSelectedFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxSelected.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxSelectedDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/checkBoxSelectedFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/linkDropTriangle.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/radio.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/radioDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/radioFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/radioSelected.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/radioSelectedDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/darcula/radioSelectedFocused.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/browseButton.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/buttonComboLeft.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/buttonComboMiddle.png");
@@ -266,6 +282,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/comboRightEditable.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/comboRightEditableDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/comboRightFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/linkDropTriangle.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/radio.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/radioDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/radioFocused.png");
@@ -284,6 +301,23 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/spinnerRight.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/spinnerRightDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/graphite/spinnerRightFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBox.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxIndeterminateSelected.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxIndeterminateSelectedDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxIndeterminateSelectedFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxSelected.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxSelectedDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/checkBoxSelectedFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/linkDropTriangle.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/radio.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/radioDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/radioFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/radioSelected.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/radioSelectedDisabled.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/intellij/radioSelectedFocused.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/linkDropTriangle.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/progressLeft.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/progressLeftSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/progressMiddle.png");
@@ -315,6 +349,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmarkSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmarkSelect_win10.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/checkmark_win10.png");
+		newIcons.add("/com/intellij/ide/ui/laf/icons/win10/linkDropTriangle.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/winCheckSign.png");
 		newIcons.add("/com/intellij/uiDesigner/icons/toolWindowUIDesigner.png");
 		newIcons.add("/com/jetbrains/chameleon/chameleon.png");
@@ -677,6 +712,8 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/icons/groovy/variable.png");
 		newIcons.add("/icons/gvariable.png");
 		newIcons.add("/icons/handlebars_icon.png");
+		newIcons.add("/icons/incoming.png");
+		newIcons.add("/icons/incomingOutgoing.png");
 		newIcons.add("/icons/index.png");
 		newIcons.add("/icons/indexUnique.png");
 		newIcons.add("/icons/IntelliSort.png");
@@ -700,6 +737,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/icons/objecTypeAttribute.png");
 		newIcons.add("/icons/OpenTerminal_13x13.png");
 		newIcons.add("/icons/operator.png");
+		newIcons.add("/icons/outgoing.png");
 		newIcons.add("/icons/package.png");
 		newIcons.add("/icons/package_root.png");
 		newIcons.add("/icons/php-function.png");
@@ -729,6 +767,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/icons/spellcheck.png");
 		newIcons.add("/icons/sql.png");
 		newIcons.add("/icons/sqlDdlStatement.png");
+		newIcons.add("/icons/stream_debugger.png");
 		newIcons.add("/icons/suspendScaled.png");
 		newIcons.add("/icons/synonym.png");
 		newIcons.add("/icons/table.png");
@@ -1026,6 +1065,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/toolwindows/documentation.png");
 		newIcons.add("/toolwindows/problems.png");
 		newIcons.add("/toolwindows/toolWindowAnt.png");
+		newIcons.add("/toolwindows/toolWindowBuild.png");
 		newIcons.add("/toolwindows/toolWindowChanges.png");
 		newIcons.add("/toolwindows/toolWindowCoverage.png");
 		newIcons.add("/toolwindows/toolWindowCvs.png");
