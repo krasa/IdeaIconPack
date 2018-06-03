@@ -12,7 +12,7 @@ import java.util.function.Consumer;
 public class CopyIconsFromIntelliJ {
 	public static void main(String[] args) throws IOException {
 		String from = "F:\\workspace\\_projekty\\Github\\intellij-community";
-		String here = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28";
+		String to = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28";
 
 		Files.walk(Paths.get(from)).filter(s -> {
 			String s1 = s.toString();
@@ -27,7 +27,7 @@ public class CopyIconsFromIntelliJ {
 					s1 = StringUtils.substringAfterLast(s, "\\src\\");
 				}
 				if (!s1.isEmpty()) {
-					Path target = Paths.get(here, s1);
+					Path target = Paths.get(to, s1);
 					System.err.println(target.toAbsolutePath());
 					try {
 						if (!Files.exists(target.getParent())) {
