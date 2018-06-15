@@ -13,7 +13,7 @@
 
     <change-notes>
     </change-notes>
-    <idea-version since-build="180.000" until-build="182.2949"/>
+    <idea-version since-build="180.000" until-build="182.2949.4"/>
     <depends>com.intellij.modules.lang</depends>
 
     <application-components>
