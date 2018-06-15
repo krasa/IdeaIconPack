@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for IntelliJ 2018.2+</name>
-    <version>1.5</version>
+    <version>1.6</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
@@ -13,7 +13,7 @@
 
     <change-notes>
     </change-notes>
-    <idea-version since-build="180.000"/>
+    <idea-version since-build="180.000" until-build="182.2949"/>
     <depends>com.intellij.modules.lang</depends>
 
     <application-components>
