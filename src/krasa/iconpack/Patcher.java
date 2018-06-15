@@ -29,17 +29,21 @@ public class Patcher extends IconPathPatcher {
 
 	@Nullable
 	@Override
-	public String patchPath(String path) {
+	public String patchPath(String path, ClassLoader classLoader) {
 		IconPathPatcher delegate = this.delegate;
 		if (delegate == null) {
 			return null;
 		}
-		return delegate.patchPath(path);
+		return delegate.patchPath(path, classLoader);
 	}
 
 	@Nullable
-	public Class getContextClass(String path) {
-		return this.getClass();
+	@Override
+	public ClassLoader getContextClassLoader(String path, ClassLoader originalClassLoader) {
+		IconPathPatcher delegate = this.delegate;
+		if (delegate == null) {
+			return null;
+		}
+		return delegate.getContextClassLoader(path, originalClassLoader);
 	}
-
 }

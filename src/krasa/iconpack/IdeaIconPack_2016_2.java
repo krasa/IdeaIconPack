@@ -20,14 +20,20 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 	}
 
 	@Nullable
-	public String patchPath(String path) {
+	@Override
+	public String patchPath(String path, ClassLoader classLoader) {
 		String pngPath = path.replace(".svg", ".png");
 		return newIcons.contains(pngPath) ? "/iconpack_2016_2" + pngPath : null;
+
 	}
 
 	@Nullable
-	public Class getContextClass(String path) {
-		return this.getClass();
+	public ClassLoader getContextClassLoader(String path, ClassLoader originalClassLoader) {
+		if (newIcons.contains(path.replace(".svg", ".png"))) {
+			return this.getClass().getClassLoader();
+		} else {
+			return null;
+		}
 	}
 
 	public static void main(String[] args) {
