@@ -46,4 +46,19 @@ public class Patcher extends IconPathPatcher {
 		}
 		return delegate.getContextClassLoader(path, originalClassLoader);
 	}
+
+	@Nullable
+	@Override
+	public String patchPath(String path) {
+		IconPathPatcher delegate = this.delegate;
+		if (delegate == null) {
+			return null;
+		}
+		return delegate.patchPath(path);
+	}
+
+	@Nullable
+	public Class getContextClass(String path) {
+		return this.getClass();
+	}
 }
