@@ -6,4 +6,5 @@ You can choose between icons from IntelliJ 2016.2 (includes some from 2018.1) an
 
 This project is based on:
 - [Idea 2016.2 Icon Pack](https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack) plugin 
+- [ToolWindow Colorful Icons](https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons) plugin 
 - https://github.com/JetBrains/intellij-community

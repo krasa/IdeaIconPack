@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+    <defs>
+        <linearGradient id="cmaketoolwindow-a" x1="90.095%" x2="0%" y1="5.142%" y2="100%">
+            <stop offset="0%" stop-color="#7777E9"/>
+            <stop offset="100%" stop-color="#01009A"/>
+        </linearGradient>
+        <linearGradient id="cmaketoolwindow-b" x1="0%" y1="2.749%" y2="100%">
+            <stop offset="0%" stop-color="#B83535"/>
+            <stop offset="100%" stop-color="#FD5B5A"/>
+        </linearGradient>
+        <linearGradient id="cmaketoolwindow-c" x1="100%" x2="16.327%" y1="100%" y2="59.996%">
+            <stop offset="0%" stop-color="#01B202"/>
+            <stop offset="100%" stop-color="#0FE90F"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <polygon fill="url(#cmaketoolwindow-a)" points="6.5 .5 7.2 6.3 .5 12"/>
+        <polygon fill="url(#cmaketoolwindow-b)" points="6.5 .5 12.5 12 7.5 9.9"/>
+        <polygon fill="url(#cmaketoolwindow-c)" points="4.45 8.55 12.5 12 .5 12"/>
+    </g>
+</svg>

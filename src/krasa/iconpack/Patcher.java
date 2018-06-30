@@ -19,10 +19,10 @@ public class Patcher extends IconPathPatcher {
 				delegate = null;
 				break;
 			case Version._2018:
-				delegate = new IdeaIconPack_2018_1();
+				delegate = new ToolWindowIconsDecorator(new IdeaIconPack_2018_1());
 				break;
 			case Version._2016:
-				delegate = new IdeaIconPack_2016_2();
+				delegate = new ToolWindowIconsDecorator(new IdeaIconPack_2016_2());
 				break;
 		}
 	}
@@ -30,6 +30,9 @@ public class Patcher extends IconPathPatcher {
 	@Nullable
 	@Override
 	public String patchPath(String path, ClassLoader classLoader) {
+		if (path == null) {
+			return null;
+		}
 		IconPathPatcher delegate = this.delegate;
 		if (delegate == null) {
 			return null;
@@ -50,15 +53,11 @@ public class Patcher extends IconPathPatcher {
 	@Nullable
 	@Override
 	public String patchPath(String path) {
-		IconPathPatcher delegate = this.delegate;
-		if (delegate == null) {
-			return null;
-		}
-		return delegate.patchPath(path);
+		return null;
 	}
 
 	@Nullable
 	public Class getContextClass(String path) {
-		return this.getClass();
+		return null;
 	}
 }

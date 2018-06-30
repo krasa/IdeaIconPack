@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for IntelliJ 2018.2+</name>
-    <version>1.7</version>
+    <version>1.8</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
@@ -9,11 +9,18 @@
          <br/>
          <br/>
         
-        Based on <a href="https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack">Idea 2016.2 Icon Pack</a> plugin.]]></description>
+        Based on 
+        <a href="https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack">Idea 2016.2 Icon Pack</a> 
+        and 
+        <a href="https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons">ToolWindow Colorful Icons</a> 
+        plugins.]]></description>
 
-    <change-notes>
+    <change-notes><![CDATA[
+    Bundled ToolWindow Colorful Icons
+      ]]>
     </change-notes>
-    <idea-version since-build="180"/>
+
+    <idea-version since-build="182.3341"/>
     <depends>com.intellij.modules.lang</depends>
 
     <application-components>
