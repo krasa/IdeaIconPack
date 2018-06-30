@@ -450,14 +450,6 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 		newIcons.add("/ide/rating4.png");
 		newIcons.add("/ide/readonly.png");
 		newIcons.add("/ide/readwrite.png");
-		newIcons.add("/ide/shadow/bottom-left.png");
-		newIcons.add("/ide/shadow/bottom-right.png");
-		newIcons.add("/ide/shadow/bottom.png");
-		newIcons.add("/ide/shadow/left.png");
-		newIcons.add("/ide/shadow/right.png");
-		newIcons.add("/ide/shadow/top-left.png");
-		newIcons.add("/ide/shadow/top-right.png");
-		newIcons.add("/ide/shadow/top.png");
 		newIcons.add("/images/toolWindowMaven.png");
 		newIcons.add("/javaee/updateRunningApplication.png");
 		newIcons.add("/modules/addContentEntry.png");

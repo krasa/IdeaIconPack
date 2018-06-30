@@ -333,7 +333,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/com/intellij/ide/ui/laf/icons/progressMiddleSelected.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/progressRight.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/progressRightSelected.png");
-		newIcons.add("/com/intellij/ide/ui/laf/icons/progressShadow.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/radio.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/radioDisabled.png");
 		newIcons.add("/com/intellij/ide/ui/laf/icons/radioFocused.png");
@@ -803,14 +802,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/ide/rating4.png");
 		newIcons.add("/ide/readonly.png");
 		newIcons.add("/ide/readwrite.png");
-		newIcons.add("/ide/shadow/bottom-left.png");
-		newIcons.add("/ide/shadow/bottom-right.png");
-		newIcons.add("/ide/shadow/bottom.png");
-		newIcons.add("/ide/shadow/left.png");
-		newIcons.add("/ide/shadow/right.png");
-		newIcons.add("/ide/shadow/top-left.png");
-		newIcons.add("/ide/shadow/top-right.png");
-		newIcons.add("/ide/shadow/top.png");
 		newIcons.add("/images/childrenProjects.png");
 		newIcons.add("/images/executeMavenGoal.png");
 		newIcons.add("/images/mavenLogo.png");
@@ -1102,14 +1093,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/windows/iconify.png");
 		newIcons.add("/windows/maximize.png");
 		newIcons.add("/windows/minimize.png");
-		newIcons.add("/windows/shadow/bottom.png");
-		newIcons.add("/windows/shadow/bottomLeft.png");
-		newIcons.add("/windows/shadow/bottomRight.png");
-		newIcons.add("/windows/shadow/left.png");
-		newIcons.add("/windows/shadow/right.png");
-		newIcons.add("/windows/shadow/top.png");
-		newIcons.add("/windows/shadow/topLeft.png");
-		newIcons.add("/windows/shadow/topRight.png");
 		newIcons.add("/xml/browsers/explorer16.png");
 		newIcons.add("/xml/browsers/opera16.png");
 		newIcons.add("/xml/browsers/safari16.png");

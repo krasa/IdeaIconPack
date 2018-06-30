@@ -2,12 +2,24 @@ package krasa.iconpack;
 
 import org.codehaus.plexus.util.FileUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
-public class JoinFolders {
+public class PrepareIconPack {
 	public static void main(String[] args) throws IOException {
+		iconpack_2016_2(args);
+		iconpack_2018_1(args);
+	}
+
+	private static void iconpack_2018_1(String[] args) throws IOException {
+		String dest = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2018_1";
+		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_181.5087.20", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
+		IdeaIconPack_2018_1.main(args);
+	}
+
+	private static void iconpack_2016_2(String[] args) throws IOException {
 		String dest = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2016_2";
 
 		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_181.5087.20", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
@@ -20,13 +32,10 @@ public class JoinFolders {
 			@Override
 			boolean include(Path fileOrDir) {
 				//they are nicer in IJ 2018
-				return startsWith(fileOrDir, "commit", "checkOut", "menu-open", "toolWindowMaven", "mavenLogo");
+				return nameStartsWith(fileOrDir, "commit", "checkOut", "menu-open", "toolWindowMaven", "mavenLogo");
 			}
 
 		});
-
-//
-		IdeaIconPack_2018_1.main(args);
 		IdeaIconPack_2016_2.main(args);
 	}
 
@@ -53,7 +62,7 @@ public class JoinFolders {
 					return FileVisitResult.CONTINUE;
 				}
 
-				if (isLogo(srcDir, fileOrDir)) {
+				if (exclude(srcDir, fileOrDir)) {
 					return FileVisitResult.CONTINUE;
 				}
 
@@ -84,9 +93,15 @@ public class JoinFolders {
 
 	}
 
-	private static boolean isLogo(Path srcDir, Path file) {
-		String name = file.toFile().getName();
-		return file.getParent().equals(srcDir) && (name.contains("_logo") || name.contains("_about"));
+	private static boolean exclude(Path srcDir, Path file) {
+		File toFile = file.toFile();
+		String name = toFile.getName();
+		return
+			name.contains("_logo")
+				|| name.contains("_about")
+				|| name.contains("Shadow")
+				|| toFile.getParentFile().getName().equals("shadow")
+			;
 	}
 
 	private static void copy2(String s, String dest, Filter filter) throws IOException {
@@ -108,7 +123,7 @@ public class JoinFolders {
 					return FileVisitResult.CONTINUE;
 				}
 
-				if (isLogo(srcDir, fileOrDir)) {
+				if (exclude(srcDir, fileOrDir)) {
 					return FileVisitResult.CONTINUE;
 				}
 
@@ -140,8 +155,8 @@ public class JoinFolders {
 			return true;
 		}
 
-		final boolean startsWith(Path fileOrDir, String... names) {
-			for (String s : names) {
+		final boolean nameStartsWith(Path fileOrDir, String... names) {
+			for (String s: names) {
 				if (fileOrDir.getFileName().toString().startsWith(s)) {
 					return true;
 				}
