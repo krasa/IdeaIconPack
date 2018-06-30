@@ -93,14 +93,15 @@ public class PrepareIconPack {
 
 	}
 
-	private static boolean exclude(Path srcDir, Path file) {
-		File toFile = file.toFile();
-		String name = toFile.getName();
+	private static boolean exclude(Path srcDir, Path path) {
+		File file = path.toFile();
+		String name = file.getName();
 		return
 			name.contains("_logo")
 				|| name.contains("_about")
 				|| name.contains("Shadow")
-				|| toFile.getParentFile().getName().equals("shadow")
+				|| file.getParentFile().getName().equals("shadow")
+				|| file.getParentFile().getAbsolutePath().contains("lafs")
 			;
 	}
 

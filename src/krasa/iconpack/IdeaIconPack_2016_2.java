@@ -823,13 +823,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/json/object.png");
 		newIcons.add("/json/property_braces.png");
 		newIcons.add("/json/property_brackets.png");
-		newIcons.add("/lafs/LinuxDarcula.png");
-		newIcons.add("/lafs/LinuxGTK.png");
-		newIcons.add("/lafs/LinuxIntelliJ.png");
-		newIcons.add("/lafs/OSXAqua.png");
-		newIcons.add("/lafs/OSXDarcula.png");
-		newIcons.add("/lafs/WindowsDarcula.png");
-		newIcons.add("/lafs/WindowsIntelliJ.png");
 		newIcons.add("/modules/addContentEntry.png");
 		newIcons.add("/modules/addExcludedRoot.png");
 		newIcons.add("/modules/annotation.png");
