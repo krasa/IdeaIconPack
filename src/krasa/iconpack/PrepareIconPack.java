@@ -102,6 +102,8 @@ public class PrepareIconPack {
 				|| name.contains("Shadow")
 				|| file.getParentFile().getName().equals("shadow")
 				|| file.getParentFile().getAbsolutePath().contains("lafs")
+				//checkbox and such is loaded all the time and fill the log
+				|| file.getParentFile().getAbsolutePath().contains("laf")
 			;
 	}
 

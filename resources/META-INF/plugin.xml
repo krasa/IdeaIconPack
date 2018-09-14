@@ -1,11 +1,11 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for IntelliJ 2018.2+</name>
-    <version>1.8</version>
+    <version>1.9</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
-        <![CDATA[Changes new modern icons to the old ones. You can choose between icons from IntelliJ 2016.2 (includes some from 2018.1) and 2018.1. 
+        <![CDATA[Changes new monochrome icons to the good colorful old ones. You can choose between icons from IntelliJ 2016.2 and 2018.1. 
          <br/>
          <br/>
         
@@ -16,7 +16,7 @@
         plugins.]]></description>
 
     <change-notes><![CDATA[
-    Bundled ToolWindow Colorful Icons
+    Excluded many hopefully unnecessary icons
       ]]>
     </change-notes>
 
