@@ -6,8 +6,8 @@ import org.jetbrains.annotations.Nullable;
 import java.io.File;
 import java.util.HashMap;
 
-public final class ToolWindowIconsDecorator extends IconPathPatcher {
-	public final static HashMap<String, String> icons = new HashMap<>();
+public final class IconsDecorator extends IconPathPatcher {
+	private final static HashMap<String, String> icons = new HashMap<>();
 	private final IconPathPatcher pathPatcher;
 
 	@Nullable
@@ -21,11 +21,14 @@ public final class ToolWindowIconsDecorator extends IconPathPatcher {
 
 	@Nullable
 	public ClassLoader getContextClassLoader(@Nullable String path, @Nullable ClassLoader originalClassLoader) {
-		return ToolWindowIconsDecorator.class.getClassLoader();
+		return IconsDecorator.class.getClassLoader();
 	}
 
-	public ToolWindowIconsDecorator(IconPathPatcher patcher) {
+	public IconsDecorator(IconPathPatcher patcher) {
 		this.pathPatcher = patcher;
+		icons.put("gradleFile.svg", "/iconpack_2018_1/icons/gradle.png");
+
+		//ToolWindow Colorful Icons
 		icons.put("CMakeToolWindow.svg", "/ToolWindowIcons/CIDR/clion/resources/icons/CMakeToolWindow.svg");
 		icons.put("toolWindowProject_AS.svg", "/ToolWindowIcons/community/android/adt-branding/src/artwork/toolWindowProject_AS.svg");
 		icons.put("androidToolWindow.svg", "/ToolWindowIcons/community/android/artwork/resources/icons/androidToolWindow.svg");

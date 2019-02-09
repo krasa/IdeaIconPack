@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
-    <name>Legacy Icon Pack for IntelliJ 2018.2+</name>
-    <version>1.9</version>
+    <name>Legacy Icon Pack 2018.2+</name>
+    <version>1.10</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>

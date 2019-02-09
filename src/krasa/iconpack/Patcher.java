@@ -19,10 +19,10 @@ public class Patcher extends IconPathPatcher {
 				delegate = null;
 				break;
 			case Version._2018:
-				delegate = new ToolWindowIconsDecorator(new IdeaIconPack_2018_1());
+				delegate = new IconsDecorator(new IdeaIconPack_2018_1());
 				break;
 			case Version._2016:
-				delegate = new ToolWindowIconsDecorator(new IdeaIconPack_2016_2());
+				delegate = new IconsDecorator(new IdeaIconPack_2016_2());
 				break;
 		}
 	}
