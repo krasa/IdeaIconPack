@@ -1,16 +1,13 @@
 package krasa.iconpack;
 
 import com.intellij.openapi.util.IconPathPatcher;
-import kotlin.Pair;
-import kotlin.TuplesKt;
-import kotlin.collections.MapsKt;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
-import java.util.Map;
+import java.util.HashMap;
 
 public final class ToolWindowIconsDecorator extends IconPathPatcher {
-	private final Map icons;
+	public final static HashMap<String, String> icons = new HashMap<>();
 	private final IconPathPatcher pathPatcher;
 
 	@Nullable
@@ -29,41 +26,41 @@ public final class ToolWindowIconsDecorator extends IconPathPatcher {
 
 	public ToolWindowIconsDecorator(IconPathPatcher patcher) {
 		this.pathPatcher = patcher;
-		this.icons = MapsKt.mapOf(new Pair[]{TuplesKt.to("CMakeToolWindow.svg", "/ToolWindowIcons/CIDR/clion/resources/icons/CMakeToolWindow.svg"),
-			TuplesKt.to("toolWindowProject_AS.svg", "/ToolWindowIcons/community/android/adt-branding/src/artwork/toolWindowProject_AS.svg"),
-			TuplesKt.to("androidToolWindow.svg", "/ToolWindowIcons/community/android/artwork/resources/icons/androidToolWindow.svg"),
-			TuplesKt.to("toolWindowWarning.svg", "/ToolWindowIcons/community/android/artwork/resources/icons/toolwindows/toolWindowWarning.svg"),
-			TuplesKt.to("toolWindowBuild.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowBuild.svg"),
-			TuplesKt.to("toolWindowChanges.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowChanges.svg"),
-			TuplesKt.to("toolWindowDebugger.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowDebugger.svg"),
-			TuplesKt.to("toolWindowFavorites.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowFavorites.svg"),
-			TuplesKt.to("toolWindowProfiler.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowProfiler.svg"),
-			TuplesKt.to("toolWindowRun.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowRun.svg"),
-			TuplesKt.to("toolWindowStructure.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowStructure.svg"),
-			TuplesKt.to("serversToolWindow.svg", "/ToolWindowIcons/community/platform/remote-servers/impl/resources/icons/serversToolWindow.svg"),
-			TuplesKt.to("griffonToolWindow.svg", "/ToolWindowIcons/community/plugins/groovy/groovy-psi/resources/icons/griffon/griffonToolWindow.svg"),
-			TuplesKt.to("toolWindowMaven.svg", "/ToolWindowIcons/community/plugins/maven/src/main/resources/images/toolWindowMaven.svg"),
-			TuplesKt.to("pythonConsoleToolWindow.svg", "/ToolWindowIcons/community/python/resources/icons/com/jetbrains/python/pythonConsoleToolWindow.svg"),
-			TuplesKt.to("dart_13.svg", "/ToolWindowIcons/contrib/Dart/resources/icons/dart_13.svg"),
-			TuplesKt.to("pubServeToolWindow.svg", "/ToolWindowIcons/contrib/Dart/resources/icons/pubServeToolWindow.svg"),
-			TuplesKt.to("toolWindowDatabase.svg", "/ToolWindowIcons/dbe/database/api/resources/icons/toolWindowDatabase.svg"),
-			TuplesKt.to("toolwindowDatabaseChanges.svg", "/ToolWindowIcons/dbe/database/api/resources/icons/toolwindowDatabaseChanges.svg"),
-			TuplesKt.to("toolWindowSQLGenerator.svg", "/ToolWindowIcons/dbe/database/api/resources/icons/toolWindowSQLGenerator.svg"),
-			TuplesKt.to("hibConsoleToolWindow.svg", "/ToolWindowIcons/plugins/frameworks/hibernate/hibernate-core/src/resources/icons/hibConsoleToolWindow.svg"),
-			TuplesKt.to("batchToolWindow.svg", "/ToolWindowIcons/plugins/javaee/batch/batch-core/src/resources/icons/batchToolWindow.svg"),
-			TuplesKt.to("cdiToolWindow.svg", "/ToolWindowIcons/plugins/javaee/cdi/cdi-core/src/resources/icons/cdiToolWindow.svg"),
-			TuplesKt.to("ejbToolWindow.svg", "/ToolWindowIcons/plugins/javaee/core/javaee-impl/source/resources/icons/ejbToolWindow.svg"),
-			TuplesKt.to("javaeeToolWindow.svg", "/ToolWindowIcons/plugins/javaee/core/javaee-impl/source/resources/icons/javaeeToolWindow.svg"),
-			TuplesKt.to("jpaToolWindow.svg", "/ToolWindowIcons/plugins/javaee/core/javaee-impl/source/resources/icons/jpaToolWindow.svg"),
-			TuplesKt.to("jsfToolWindow.svg", "/ToolWindowIcons/plugins/javaee/jsf/jsf-core/src/resources/icons/jsfToolWindow.svg"),
-			TuplesKt.to("webSocketFrameworkToolWindow.svg", "/ToolWindowIcons/plugins/javaee/web-socket/websocket/src/resources/icons/webSocketFrameworkToolWindow.svg"),
-			TuplesKt.to("grunt_toolwindow.svg", "/ToolWindowIcons/plugins/JavaScriptLanguage/src/icons/buildTools/grunt/grunt_toolwindow.svg"),
-			TuplesKt.to("gulp_toolwindow.svg", "/ToolWindowIcons/plugins/JavaScriptLanguage/src/icons/buildTools/gulp_toolwindow.svg"),
-			TuplesKt.to("npm_13.svg", "/ToolWindowIcons/plugins/JavaScriptLanguage/src/icons/buildTools/npm/npm_13.svg"),
-			TuplesKt.to("OpenV8HeapSnapshot_ToolWin.svg", "/ToolWindowIcons/plugins/NodeJS/src/com/jetbrains/nodejs/icons/OpenV8HeapSnapshot_ToolWin.svg"),
-			TuplesKt.to("OpenV8ProfilingLog_ToolWin.svg", "/ToolWindowIcons/plugins/NodeJS/src/com/jetbrains/nodejs/icons/OpenV8ProfilingLog_ToolWin.svg"),
-			TuplesKt.to("v8_ToolWin.svg", "/ToolWindowIcons/plugins/NodeJS/src/com/jetbrains/nodejs/icons/v8_ToolWin.svg"),
-			TuplesKt.to("springToolWindow.svg", "/ToolWindowIcons/plugins/spring/spring-api/resources/icons/springToolWindow.svg"),
-			TuplesKt.to("ConcurrencyDiagramToolwindow.svg", "/ToolWindowIcons/python/concurrency-visualiser/resources/icons/ConcurrencyDiagramToolwindow.svg")});
+		icons.put("CMakeToolWindow.svg", "/ToolWindowIcons/CIDR/clion/resources/icons/CMakeToolWindow.svg");
+		icons.put("toolWindowProject_AS.svg", "/ToolWindowIcons/community/android/adt-branding/src/artwork/toolWindowProject_AS.svg");
+		icons.put("androidToolWindow.svg", "/ToolWindowIcons/community/android/artwork/resources/icons/androidToolWindow.svg");
+		icons.put("toolWindowWarning.svg", "/ToolWindowIcons/community/android/artwork/resources/icons/toolwindows/toolWindowWarning.svg");
+		icons.put("toolWindowBuild.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowBuild.svg");
+		icons.put("toolWindowChanges.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowChanges.svg");
+		icons.put("toolWindowDebugger.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowDebugger.svg");
+		icons.put("toolWindowFavorites.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowFavorites.svg");
+		icons.put("toolWindowProfiler.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowProfiler.svg");
+		icons.put("toolWindowRun.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowRun.svg");
+		icons.put("toolWindowStructure.svg", "/ToolWindowIcons/community/platform/icons/src/toolwindows/toolWindowStructure.svg");
+		icons.put("serversToolWindow.svg", "/ToolWindowIcons/community/platform/remote-servers/impl/resources/icons/serversToolWindow.svg");
+		icons.put("griffonToolWindow.svg", "/ToolWindowIcons/community/plugins/groovy/groovy-psi/resources/icons/griffon/griffonToolWindow.svg");
+		icons.put("toolWindowMaven.svg", "/ToolWindowIcons/community/plugins/maven/src/main/resources/images/toolWindowMaven.svg");
+		icons.put("pythonConsoleToolWindow.svg", "/ToolWindowIcons/community/python/resources/icons/com/jetbrains/python/pythonConsoleToolWindow.svg");
+		icons.put("dart_13.svg", "/ToolWindowIcons/contrib/Dart/resources/icons/dart_13.svg");
+		icons.put("pubServeToolWindow.svg", "/ToolWindowIcons/contrib/Dart/resources/icons/pubServeToolWindow.svg");
+		icons.put("toolWindowDatabase.svg", "/ToolWindowIcons/dbe/database/api/resources/icons/toolWindowDatabase.svg");
+		icons.put("toolwindowDatabaseChanges.svg", "/ToolWindowIcons/dbe/database/api/resources/icons/toolwindowDatabaseChanges.svg");
+		icons.put("toolWindowSQLGenerator.svg", "/ToolWindowIcons/dbe/database/api/resources/icons/toolWindowSQLGenerator.svg");
+		icons.put("hibConsoleToolWindow.svg", "/ToolWindowIcons/plugins/frameworks/hibernate/hibernate-core/src/resources/icons/hibConsoleToolWindow.svg");
+		icons.put("batchToolWindow.svg", "/ToolWindowIcons/plugins/javaee/batch/batch-core/src/resources/icons/batchToolWindow.svg");
+		icons.put("cdiToolWindow.svg", "/ToolWindowIcons/plugins/javaee/cdi/cdi-core/src/resources/icons/cdiToolWindow.svg");
+		icons.put("ejbToolWindow.svg", "/ToolWindowIcons/plugins/javaee/core/javaee-impl/source/resources/icons/ejbToolWindow.svg");
+		icons.put("javaeeToolWindow.svg", "/ToolWindowIcons/plugins/javaee/core/javaee-impl/source/resources/icons/javaeeToolWindow.svg");
+		icons.put("jpaToolWindow.svg", "/ToolWindowIcons/plugins/javaee/core/javaee-impl/source/resources/icons/jpaToolWindow.svg");
+		icons.put("jsfToolWindow.svg", "/ToolWindowIcons/plugins/javaee/jsf/jsf-core/src/resources/icons/jsfToolWindow.svg");
+		icons.put("webSocketFrameworkToolWindow.svg", "/ToolWindowIcons/plugins/javaee/web-socket/websocket/src/resources/icons/webSocketFrameworkToolWindow.svg");
+		icons.put("grunt_toolwindow.svg", "/ToolWindowIcons/plugins/JavaScriptLanguage/src/icons/buildTools/grunt/grunt_toolwindow.svg");
+		icons.put("gulp_toolwindow.svg", "/ToolWindowIcons/plugins/JavaScriptLanguage/src/icons/buildTools/gulp_toolwindow.svg");
+		icons.put("npm_13.svg", "/ToolWindowIcons/plugins/JavaScriptLanguage/src/icons/buildTools/npm/npm_13.svg");
+		icons.put("OpenV8HeapSnapshot_ToolWin.svg", "/ToolWindowIcons/plugins/NodeJS/src/com/jetbrains/nodejs/icons/OpenV8HeapSnapshot_ToolWin.svg");
+		icons.put("OpenV8ProfilingLog_ToolWin.svg", "/ToolWindowIcons/plugins/NodeJS/src/com/jetbrains/nodejs/icons/OpenV8ProfilingLog_ToolWin.svg");
+		icons.put("v8_ToolWin.svg", "/ToolWindowIcons/plugins/NodeJS/src/com/jetbrains/nodejs/icons/v8_ToolWin.svg");
+		icons.put("springToolWindow.svg", "/ToolWindowIcons/plugins/spring/spring-api/resources/icons/springToolWindow.svg");
+		icons.put("ConcurrencyDiagramToolwindow.svg", "/ToolWindowIcons/python/concurrency-visualiser/resources/icons/ConcurrencyDiagramToolwindow.svg");
 	}
 }
