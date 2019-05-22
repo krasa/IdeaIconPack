@@ -10,4 +10,4 @@ This project is based on:
 - https://github.com/JetBrains/intellij-community
 
 [badge-paypal-img]:       https://img.shields.io/badge/donate-paypal-black.svg
-[badge-paypal]:           https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=75YN7U7H7D7XU&lc=CZ&item_name=Legacy%20Icon%20Pack%20for%20IntelliJ%202018.2%20%2d%20Donation&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
+[badge-paypal]:           https://www.paypal.me/VojtechKrasa
