@@ -928,10 +928,6 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/welcome/fromVCS.png");
 		newIcons.add("/welcome/importProject.png");
 		newIcons.add("/welcome/openProject.png");
-		newIcons.add("/windows/close.png");
-		newIcons.add("/windows/iconify.png");
-		newIcons.add("/windows/maximize.png");
-		newIcons.add("/windows/minimize.png");
 		newIcons.add("/xml/browsers/explorer16.png");
 		newIcons.add("/xml/browsers/opera16.png");
 		newIcons.add("/xml/browsers/safari16.png");

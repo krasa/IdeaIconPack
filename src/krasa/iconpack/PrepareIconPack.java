@@ -22,6 +22,8 @@ public class PrepareIconPack {
 	private static void iconpack_2016_2(String[] args) throws IOException {
 		String dest = "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\src\\iconpack_2016_2";
 
+		delete(dest);
+
 		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_181.5087.20", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
 
 		copyDiff("F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\idea_162.2228.15", "F:\\workspace\\_projekty\\Github\\IdeaIconPack\\icons\\master_2018_05_28", dest, null);
@@ -37,6 +39,10 @@ public class PrepareIconPack {
 
 		});
 		IdeaIconPack_2016_2.main(args);
+	}
+
+	private static void delete(String dest) throws IOException {
+		FileUtils.deleteDirectory(new File(dest));
 	}
 
 	private static void copyDiff(String src, String diff, String dest, final Filter filter) throws IOException {
@@ -101,6 +107,7 @@ public class PrepareIconPack {
 				|| name.contains("_about")
 				|| name.contains("Shadow")
 				|| file.getParentFile().getName().equals("shadow")
+				|| file.getParentFile().getName().equals("windows")
 				|| file.getParentFile().getAbsolutePath().contains("lafs")
 				//checkbox and such is loaded all the time and fill the log
 				|| file.getParentFile().getAbsolutePath().contains("laf")
