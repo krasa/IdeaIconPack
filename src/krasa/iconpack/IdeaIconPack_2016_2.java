@@ -808,6 +808,7 @@ public class IdeaIconPack_2016_2 extends IconPathPatcher {
 		newIcons.add("/nodes/propertyWrite.png");
 		newIcons.add("/nodes/propertyWriteStatic.png");
 		newIcons.add("/nodes/read-access.png");
+		newIcons.add("/nodes/record.png");
 		newIcons.add("/nodes/resourceBundle.png");
 		newIcons.add("/nodes/runnableMark.png");
 		newIcons.add("/nodes/rw-access.png");
