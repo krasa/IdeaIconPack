@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for 2018.2+</name>
-    <version>1.11</version>
+    <version>1.12</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
