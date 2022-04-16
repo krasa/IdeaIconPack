@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for 2018.2+</name>
-    <version>1.12</version>
+    <version>1.13</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
@@ -16,11 +16,15 @@
         plugins.]]></description>
 
     <change-notes><![CDATA[
+
         Created/Adding record icon for the theme Intelllij 2016
+        <br> <br>
+        Disabled debugger icons, until <a href="https://youtrack.jetbrains.com/issue/IDEA-290478"/>IDEA-290478</a> is fixed
+
       ]]>
     </change-notes>
 
-    <idea-version since-build="182.3341"/>
+    <idea-version since-build="221.0"/>
     <depends>com.intellij.modules.lang</depends>
 
     <application-components>
