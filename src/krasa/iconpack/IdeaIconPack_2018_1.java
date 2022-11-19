@@ -23,7 +23,7 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 	@Nullable
 	public String patchPath(String path) {
 		String pngPath = path.replace(".svg", ".png");
-		return newIcons.contains(pngPath) ? "/iconpack_2018_1" + pngPath : null;
+		return newIcons.contains(pngPath) ? "iconpack_2018_1" + pngPath : null;
 	}
 
 	@Nullable
@@ -34,7 +34,7 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 	@Override
 	public String patchPath(String path, ClassLoader classLoader) {
 		String pngPath = path.replace(".svg", ".png");
-		return newIcons.contains(pngPath) ? "/iconpack_2018_1" + pngPath : null;
+		return newIcons.contains(pngPath) ? "iconpack_2018_1" + pngPath : null;
 
 	}
 
