@@ -16,12 +16,18 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 
 	public final static HashSet<String> newIcons = new HashSet<>();
 
-	public IdeaIconPack_2018_1() {
+	private final boolean fileOnly;
+
+	public IdeaIconPack_2018_1(boolean fileOnly) {
+		this.fileOnly = fileOnly;
 	}
 
 
 	@Nullable
 	public String patchPath(String path) {
+		if (this.fileOnly && !path.startsWith("/fileTypes/")) {
+			return null;
+		}
 		String pngPath = path.replace(".svg", ".png");
 		return newIcons.contains(pngPath) ? "iconpack_2018_1" + pngPath : null;
 	}
@@ -30,16 +36,22 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 	public Class getContextClass(String path) {
 		return this.getClass();
 	}
+
 	@Nullable
 	@Override
 	public String patchPath(String path, ClassLoader classLoader) {
+		if (this.fileOnly && !path.startsWith("/fileTypes/")) {
+			return null;
+		}
 		String pngPath = path.replace(".svg", ".png");
 		return newIcons.contains(pngPath) ? "iconpack_2018_1" + pngPath : null;
-
 	}
 
 	@Nullable
 	public ClassLoader getContextClassLoader(String path, ClassLoader originalClassLoader) {
+		if (this.fileOnly && !path.startsWith("/fileTypes/")) {
+			return null;
+		}
 		if (newIcons.contains(path.replace(".svg", ".png"))) {
 			return this.getClass().getClassLoader();
 		} else {
