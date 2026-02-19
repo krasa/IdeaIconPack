@@ -6,6 +6,7 @@ public class GUI {
 	private JRadioButton disable;
 	private JRadioButton from2016;
 	private JRadioButton from2018;
+	private JRadioButton from2018files;
 	public JPanel root;
 
 	public GUI() {
@@ -18,6 +19,9 @@ public class GUI {
 				break;
 			case Version._2018:
 				from2018.setSelected(true);
+				break;
+			case Version._2018_files:
+				from2018files.setSelected(true);
 				break;
 		}
 	}
@@ -35,6 +39,9 @@ public class GUI {
 		}
 		if (from2018.isSelected()) {
 			return Version._2018;
+		}
+		if (from2018files.isSelected()) {
+			return Version._2018_files;
 		}
 		return Version.DEFAULT_VALUE;
 	}

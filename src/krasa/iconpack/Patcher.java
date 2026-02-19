@@ -18,8 +18,11 @@ public class Patcher extends IconPathPatcher {
 			case Version.DISABLED:
 				delegate = null;
 				break;
+			case Version._2018_files:
+				delegate = new IconsDecorator(new IdeaIconPack_2018_1(true));
+				break;
 			case Version._2018:
-				delegate = new IconsDecorator(new IdeaIconPack_2018_1());
+				delegate = new IconsDecorator(new IdeaIconPack_2018_1(false));
 				break;
 			case Version._2016:
 				delegate = new IconsDecorator(new IdeaIconPack_2016_2());
