@@ -14,6 +14,12 @@ plugins {
 group = providers.gradleProperty("pluginGroup").get()
 version = providers.gradleProperty("pluginVersion").get()
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
 // Set the JVM language level used to build the project.
 //kotlin {
 //    jvmToolchain(21)

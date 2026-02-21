@@ -4,8 +4,8 @@ import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.util.IconPathPatcher;
 import org.jetbrains.annotations.Nullable;
 
-public class Patcher extends IconPathPatcher {
-	static IconPathPatcher delegate = null;
+public class Patcher extends SimpleIconPathPatcher {
+	static SimpleIconPathPatcher delegate = null;
 
 	public Patcher() {
 		init();
@@ -19,10 +19,10 @@ public class Patcher extends IconPathPatcher {
 				delegate = null;
 				break;
 			case Version._2018_files:
-				delegate = new IconsDecorator(new IdeaIconPack_2018_1(true));
+				delegate = new FileOnlyIconFilter(new IconsDecorator(new IdeaIconPack_2018_1()));
 				break;
 			case Version._2018:
-				delegate = new IconsDecorator(new IdeaIconPack_2018_1(false));
+				delegate = new IconsDecorator(new IdeaIconPack_2018_1());
 				break;
 			case Version._2016:
 				delegate = new IconsDecorator(new IdeaIconPack_2016_2());
@@ -30,37 +30,11 @@ public class Patcher extends IconPathPatcher {
 		}
 	}
 
-	@Nullable
 	@Override
-	public String patchPath(String path, ClassLoader classLoader) {
-		if (path == null) {
-			return null;
-		}
-		IconPathPatcher delegate = this.delegate;
-		if (delegate == null) {
-			return null;
-		}
-		return delegate.patchPath(path, classLoader);
+	public String redirectIconPath(String iconPath) {
+		SimpleIconPathPatcher delegate = Patcher.delegate;
+		return delegate == null ? null :
+				delegate.redirectIconPath(iconPath);
 	}
 
-	@Nullable
-	@Override
-	public ClassLoader getContextClassLoader(String path, ClassLoader originalClassLoader) {
-		IconPathPatcher delegate = this.delegate;
-		if (delegate == null) {
-			return null;
-		}
-		return delegate.getContextClassLoader(path, originalClassLoader);
-	}
-
-	@Nullable
-	@Override
-	public String patchPath(String path) {
-		return null;
-	}
-
-	@Nullable
-	public Class getContextClass(String path) {
-		return null;
-	}
 }

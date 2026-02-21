@@ -1,31 +1,28 @@
 package krasa.iconpack;
 
-import com.intellij.openapi.util.IconPathPatcher;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.util.HashMap;
 
-public final class IconsDecorator extends IconPathPatcher {
+public final class IconsDecorator extends SimpleIconPathPatcher {
 	private final static HashMap<String, String> icons = new HashMap<>();
-	private final IconPathPatcher pathPatcher;
+	private final SimpleIconPathPatcher pathPatcher;
 
-	@Nullable
-	public String patchPath(String path, @Nullable ClassLoader classLoader) {
-		String s = pathPatcher.patchPath(path, classLoader);
+	@Override
+	public String redirectIconPath(String iconPath) {
+		String s = this.pathPatcher.redirectIconPath(iconPath);
 		if (s == null) {
-			s = (String) this.icons.get((new File(path)).getName());
+			s = icons.get((new File(iconPath)).getName());
 		}
 		return s;
 	}
 
-	@Nullable
-	public ClassLoader getContextClassLoader(@Nullable String path, @Nullable ClassLoader originalClassLoader) {
-		return IconsDecorator.class.getClassLoader();
+	public IconsDecorator(SimpleIconPathPatcher patcher) {
+		this.pathPatcher = patcher;
 	}
 
-	public IconsDecorator(IconPathPatcher patcher) {
-		this.pathPatcher = patcher;
+	static {
 		icons.put("gradleFile.svg", "iconpack_2018_1/icons/gradle.png");
 
 		//ToolWindow Colorful Icons

@@ -12,52 +12,19 @@ import java.util.HashSet;
 /**
  * originally from https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack
  */
-public class IdeaIconPack_2018_1 extends IconPathPatcher {
+public class IdeaIconPack_2018_1 extends SimpleIconPathPatcher {
 
 	public final static HashSet<String> newIcons = new HashSet<>();
 
-	private final boolean fileOnly;
-
-	public IdeaIconPack_2018_1(boolean fileOnly) {
-		this.fileOnly = fileOnly;
-	}
+	public IdeaIconPack_2018_1() {}
 
 
 	@Nullable
-	public String patchPath(String path) {
-		if (this.fileOnly && !path.startsWith("/fileTypes/")) {
-			return null;
-		}
+	public String redirectIconPath(String path) {
 		String pngPath = path.replace(".svg", ".png");
 		return newIcons.contains(pngPath) ? "iconpack_2018_1" + pngPath : null;
 	}
 
-	@Nullable
-	public Class getContextClass(String path) {
-		return this.getClass();
-	}
-
-	@Nullable
-	@Override
-	public String patchPath(String path, ClassLoader classLoader) {
-		if (this.fileOnly && !path.startsWith("/fileTypes/")) {
-			return null;
-		}
-		String pngPath = path.replace(".svg", ".png");
-		return newIcons.contains(pngPath) ? "iconpack_2018_1" + pngPath : null;
-	}
-
-	@Nullable
-	public ClassLoader getContextClassLoader(String path, ClassLoader originalClassLoader) {
-		if (this.fileOnly && !path.startsWith("/fileTypes/")) {
-			return null;
-		}
-		if (newIcons.contains(path.replace(".svg", ".png"))) {
-			return this.getClass().getClassLoader();
-		} else {
-			return null;
-		}
-	}
 	public static void main(String[] args) {
 		StringBuilder buf = new StringBuilder("\n");
 		buf.append("\n");
@@ -420,6 +387,7 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 		newIcons.add("/javaee/updateRunningApplication.png");
 		newIcons.add("/modules/addContentEntry.png");
 		newIcons.add("/modules/addExcludedRoot.png");
+		newIcons.add("/modules/annotation.png");
 		newIcons.add("/modules/edit.png");
 		newIcons.add("/modules/editFolder.png");
 		newIcons.add("/modules/excludedGeneratedRoot.png");
@@ -450,20 +418,25 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 		newIcons.add("/nodes/enum.png");
 		newIcons.add("/nodes/exceptionClass.png");
 		newIcons.add("/nodes/field.png");
+		newIcons.add("/nodes/finalMark.png");
 		newIcons.add("/nodes/folder.png");
 		newIcons.add("/nodes/function.png");
 		newIcons.add("/nodes/ideaModule.png");
 		newIcons.add("/nodes/ideaProject.png");
 		newIcons.add("/nodes/interface.png");
+		newIcons.add("/nodes/locked.png");
 		newIcons.add("/nodes/method.png");
 		newIcons.add("/nodes/methodReference.png");
 		newIcons.add("/nodes/Module.png");
 		newIcons.add("/nodes/moduleGroup.png");
+		newIcons.add("/nodes/nativeLibrariesFolder.png");
 		newIcons.add("/nodes/newFolder.png");
 		newIcons.add("/nodes/package.png");
 		newIcons.add("/nodes/parameter.png");
 		newIcons.add("/nodes/pointcut.png");
+		newIcons.add("/nodes/ppFile.png");
 		newIcons.add("/nodes/ppJar.png");
+		newIcons.add("/nodes/ppJdk.png");
 		newIcons.add("/nodes/ppLib.png");
 		newIcons.add("/nodes/ppLibFolder.png");
 		newIcons.add("/nodes/property.png");
@@ -474,6 +447,7 @@ public class IdeaIconPack_2018_1 extends IconPathPatcher {
 		newIcons.add("/nodes/propertyWrite.png");
 		newIcons.add("/nodes/propertyWriteStatic.png");
 		newIcons.add("/nodes/resourceBundle.png");
+		newIcons.add("/nodes/runnableMark.png");
 		newIcons.add("/nodes/sourceFolder.png");
 		newIcons.add("/nodes/static.png");
 		newIcons.add("/nodes/TreeClosed.png");
