@@ -19,9 +19,6 @@ version = providers.gradleProperty("pluginVersion").get()
 //    jvmToolchain(21)
 //}
 
-java.sourceSets["main"].java {
-    srcDir("gen")
-}
 
 // Configure project's dependencies
 repositories {
