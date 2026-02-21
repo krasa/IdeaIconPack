@@ -1,8 +1,6 @@
 package krasa.iconpack;
 
-import com.intellij.openapi.util.IconPathPatcher;
 import com.intellij.openapi.util.io.FileUtil;
-import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,40 +10,15 @@ import java.util.HashSet;
 /**
  * originally from https://plugins.jetbrains.com/plugin/7285-idea-2016-2-icon-pack
  */
-public class IdeaIconPack_2016_2 extends IconPathPatcher {
-
+public class IdeaIconPack_2016_2 extends SimpleIconPathPatcher {
 	public final static HashSet<String> newIcons = new HashSet<>();
 
-	public IdeaIconPack_2016_2() {
-	}
+	public IdeaIconPack_2016_2() {}
 
-
-	@Nullable
-	public String patchPath(String path) {
-		String pngPath = path.replace(".svg", ".png");
-		return newIcons.contains(pngPath) ? "iconpack_2016_2" + pngPath : null;
-	}
-
-	@Nullable
-	public Class getContextClass(String path) {
-		return this.getClass();
-	}
-	            
-	@Nullable
 	@Override
-	public String patchPath(String path, ClassLoader classLoader) {
-		String pngPath = path.replace(".svg", ".png");
+	public String redirectIconPath(String iconPath) {
+		String pngPath = iconPath.replace(".svg", ".png");
 		return newIcons.contains(pngPath) ? "iconpack_2016_2" + pngPath : null;
-
-	}
-
-	@Nullable
-	public ClassLoader getContextClassLoader(String path, ClassLoader originalClassLoader) {
-		if (newIcons.contains(path.replace(".svg", ".png"))) {
-			return this.getClass().getClassLoader();
-		} else {
-			return null;
-		}
 	}
 
 	public static void main(String[] args) {
