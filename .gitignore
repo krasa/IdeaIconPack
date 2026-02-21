@@ -1,2 +1,7 @@
-/.idea
-out/
+.DS_Store
+.gradle
+.idea
+.intellijPlatform
+.kotlin
+.qodana
+build
