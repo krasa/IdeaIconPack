@@ -1,7 +1,6 @@
 <idea-plugin version="2">
     <id>krasa.IdeaIconPack</id>
     <name>Legacy Icon Pack for 2018.2+</name>
-    <version>1.14</version>
     <vendor url="https://github.com/krasa/IdeaIconPack" email="vojta.krasa@gmail.com">Vojtech Krasa</vendor>
 
     <description>
@@ -15,14 +14,6 @@
         <a href="https://plugins.jetbrains.com/plugin/10863-toolwindow-colorful-icons">ToolWindow Colorful Icons</a> 
         plugins.]]></description>
 
-    <change-notes><![CDATA[
-
-        API change in IntelliJ 2022.3
-
-      ]]>
-    </change-notes>
-
-    <idea-version since-build="223.0"/>
     <depends>com.intellij.modules.lang</depends>
 
     <application-components>
