@@ -7,13 +7,13 @@ import org.jetbrains.annotations.Nullable;
 public abstract class SimpleIconPathPatcher extends IconPathPatcher {
 	public SimpleIconPathPatcher() {}
 
-	@Override
+//	@Override do not override deprecated API
 	@SuppressWarnings("UnstableApiUsage")
 	public final @Nullable String patchPath(@NotNull String path) {
 		return this.redirectIconPath(path);
 	}
 
-	@Override
+//	@Override do not override deprecated API
 	@SuppressWarnings("UnstableApiUsage")
 	public final Class<?> getContextClass(@NotNull String path) {
 		return SimpleIconPathPatcher.class;
